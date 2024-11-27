@@ -9,7 +9,7 @@ describe("IdentiFi", function () {
     [owner, user1, user2] = await hre.ethers.getSigners();
     const IdentiFi = await hre.ethers.getContractFactory("IdentiFi");
     identiFi = await IdentiFi.deploy();
-    await identiFi.deployed();
+    await IdentiFi.deploy();
   });
 
   it("Should create a new user", async function () {
